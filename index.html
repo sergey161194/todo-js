@@ -1,13 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400&display=swap">
     <title>TODO</title>
 </head>
 <body>
+<div class="wrapper">
+
+    <header class="header">Todo App</header>
+
+    <section class="header-input">
+
+        <div class="text-field">
+            <form id="form" class="text-field__group">
+                <label for="text"></label>
+                <input class="field__input" type="text" id="text" name="search">
+                <button class="add-task-btn" type="submit">ADD TASK</button>
+            </form>
+        </div>
+
+        <label class="select-label">
+            <span>Приоритет:</span>
+            <select class="priority-select">
+                <option>High</option>
+                <option>Medium</option>
+                <option>Low</option>
+            </select>
+        </label>
+
+    </section>
+
+    <section class="filter">
+        <div>
+            <input type="checkbox" id="completed" name="completed" checked/>
+            <label for="completed">Completed</label>
+        </div>
+        <div>
+            <input type="checkbox" id="high" name="high" checked/>
+            <label for="high">High</label>
+        </div>
+        <div>
+            <input type="checkbox" id="medium" name="medium"/>
+            <label for="medium">Medium</label>
+        </div>
+        <div>
+            <input type="checkbox" id="low" name="low"/>
+            <label for="low">Low</label>
+        </div>
+
+        <label class="select-label">
+            <span>Упорядочить:</span>
+            <select class="select">
+                <option>Сначала новые</option>
+                <option>Сначала старые</option>
+            </select>
+        </label>
+
+    </section>
+
+    <table id="tasks-table">
+        <thead>
+        <tr>
+            <th class="task__title">Название</th>
+            <th class="task__startTime">Дата начала</th>
+            <th class="task__endTime">Дата окончания</th>
+            <th class="task__priority">Приоритет</th>
+            <th class="task__operations">Действия</th>
+        </tr>
+        </thead>
+        <tbody class="tasks-table-list">
+        </tbody>
+    </table>
+
+</div>
 <script src="script.js"></script>
 </body>
 </html>
